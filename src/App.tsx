@@ -52,8 +52,8 @@ const App: React.FC = () => {
     );
   };
 
-  const calculateCartCount = () => {
-    cart.reduce((total, item) => total + item.quantity, 0);
+  const calculateCartCount = (): number => {
+    return cart.reduce((total, item) => total + item.quantity, 0);
   };
 
   const calculateTotal = () =>
