@@ -40,6 +40,18 @@ const App: React.FC = () => {
     });
   };
 
+  const handleRemoveFromCart = (productName: string) => {
+    setCart((prevCart) =>
+      prevCart
+        .map((item) =>
+          item.product.name === productName
+            ? { ...item, quantity: item.quantity - 1 }
+            : item
+        )
+        .filter((item) => item.quantity > 0)
+    );
+  };
+
   return (
     <div className="app-container">
       <Header />
