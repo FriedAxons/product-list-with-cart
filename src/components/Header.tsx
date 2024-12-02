@@ -1,10 +1,13 @@
-const Header: React.FC = () => {
+interface HeaderProps {
+  cartCount: number;
+}
+
+const Header: React.FC<HeaderProps> = ({ cartCount }) => {
   return (
-    <header>
+    <header className="header">
       <h1>Desserts</h1>
-      {/* Cart section */}
       <div>
-        <h2>Your Cart (/* dynamic item count */)</h2>
+        <h2>Your Cart ({cartCount})</h2>
       </div>
     </header>
   );

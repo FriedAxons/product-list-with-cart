@@ -70,7 +70,7 @@ const App: React.FC = () => {
 
   return (
     <div className="app-container">
-      <Header cartCount={calculateCartCount} />
+      <Header cartCount={calculateCartCount()} />
       <div className="main-content">
         <ProductList products={products} addToCart={handleAddToCart} />
         <Cart
