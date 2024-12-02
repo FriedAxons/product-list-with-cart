@@ -52,6 +52,10 @@ const App: React.FC = () => {
     );
   };
 
+  const calculateCartCount = () => {
+    cart.reduce((total, item) => total + item.quantity, 0);
+  }
+
   return (
     <div className="app-container">
       <Header />
