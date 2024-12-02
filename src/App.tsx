@@ -1,9 +1,9 @@
 import { useState } from "react";
 import productData from "./data/data.json";
 import Header from "./components/Header";
-// import ProductList from "./components/ProductList";
-// import Cart from "./components/Cart";
-// import Modal from "./components/Modal";
+import ProductList from "./components/ProductList";
+import Cart from "./components/Cart";
+import Modal from "./components/Modal";
 
 interface Product {
   image: {
@@ -54,7 +54,7 @@ const App: React.FC = () => {
 
   const calculateCartCount = () => {
     cart.reduce((total, item) => total + item.quantity, 0);
-  }
+  };
 
   const calculateTotal = () =>
     cart
@@ -67,11 +67,20 @@ const App: React.FC = () => {
     setCart([]);
     setShowModal(false);
   };
-  
 
   return (
     <div className="app-container">
-      <Header />
+      <Header cartCount={calculateCartCount} />
+      <div className="main-content">
+        <ProductList products={products} addToCart={handleAddToCart} />
+        <Cart
+          cartItems={cart}
+          total={calculateTotal()}
+          removeFromCart={handleRemoveFromCart}
+          confirmOrder={handleConfirmOrder}
+        />
+      </div>
+      {showModal && <Modal onNewOrder={handleStartNewOrder} />}
     </div>
   );
 };

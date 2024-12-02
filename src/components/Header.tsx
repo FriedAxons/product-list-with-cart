@@ -1,7 +1,7 @@
 const Header: React.FC = () => {
   return (
-    <header className="bg-blue-500">
-      <h1 className="text-xl">Desserts</h1>
+    <header>
+      <h1>Desserts</h1>
       {/* Cart section */}
       <div>
         <h2>Your Cart (/* dynamic item count */)</h2>
