@@ -56,6 +56,11 @@ const App: React.FC = () => {
     cart.reduce((total, item) => total + item.quantity, 0);
   }
 
+   const calculateTotal = () =>
+     cart
+       .reduce((total, item) => total + item.product.price * item.quantity, 0)
+       .toFixed(2);
+
   return (
     <div className="app-container">
       <Header />
