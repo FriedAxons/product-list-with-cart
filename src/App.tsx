@@ -62,6 +62,11 @@ const App: React.FC = () => {
       .toFixed(2);
 
   const handleConfirmOrder = () => setShowModal(true);
+
+  const handleStartNewOrder = () => {
+    setCart([]);
+    setShowModal(false);
+  };
   
 
   return (
