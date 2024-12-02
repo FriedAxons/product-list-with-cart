@@ -2,7 +2,7 @@ interface HeaderProps {
   cartCount: number;
 }
 
-const Header: React.FC<HeaderProps> = ({ cartCount }) => {
+const Header = ({ cartCount }: HeaderProps) => {
   return (
     <header className="header">
       <h1>Desserts</h1>

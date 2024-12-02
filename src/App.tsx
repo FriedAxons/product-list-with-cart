@@ -17,7 +17,7 @@ interface Product {
   price: number;
 }
 
-const App: React.FC = () => {
+const App = () => {
   const [products] = useState<Product[]>(productData);
   const [cart, setCart] = useState<{ product: Product; quantity: number }[]>(
     []
