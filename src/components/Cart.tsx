@@ -1,5 +1,5 @@
 import { Product } from "../App";
-import removeIcon from "images/icon-remove-item.svg";
+import removeIcon from "../../public/images/icon-remove-item.svg";
 
 interface CartProps {
   cartItems: { product: Product; quantity: number }[];

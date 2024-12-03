@@ -9,7 +9,7 @@ const ProductList = ({ products, addToCart }: ProductListProps) => (
   <div className="product-list">
     {products.map((product) => (
       <div key={product.name} className="product-card">
-        <img src={product.image.thumbnail} alt={product.name} />
+        <img src={product.image.desktop} alt={product.name} />
         <button onClick={() => addToCart(product)}>Add to Cart</button>
         <p>{product.category}</p>
         <h3>{product.name}</h3>

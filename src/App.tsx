@@ -2,8 +2,8 @@ import { useState } from "react";
 import productData from "./data/data.json";
 import Header from "./components/Header";
 import ProductList from "./components/ProductList";
-// import Cart from "./components/Cart";
-// import Modal from "./components/Modal";
+import Cart from "./components/Cart";
+import Modal from "./components/Modal";
 
 export interface Product {
   image: {
@@ -73,14 +73,20 @@ const App = () => {
       <Header cartCount={calculateCartCount()} />
       <div className="main-content">
         <ProductList products={products} addToCart={handleAddToCart} />
-        {/* <Cart
+        <Cart
           cartItems={cart}
           total={calculateTotal()}
           removeFromCart={handleRemoveFromCart}
           confirmOrder={handleConfirmOrder}
-        /> */}
+        />
       </div>
-      {/* {showModal && <Modal onNewOrder={handleStartNewOrder} />} */}
+      {showModal && (
+        <Modal
+          cartItems={cart}
+          total={calculateTotal()}
+          onNewOrder={handleStartNewOrder}
+        />
+      )}
     </div>
   );
 };
