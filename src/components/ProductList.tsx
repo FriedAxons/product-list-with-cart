@@ -1,4 +1,5 @@
 import { Product } from "../App";
+
 interface ProductListProps {
   products: Product[];
   addToCart: (product: Product) => void;

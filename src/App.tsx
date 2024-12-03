@@ -52,7 +52,7 @@ const App = () => {
     );
   };
 
-  const calculateCartCount = (): number => {
+  const calculateCartCount = () => {
     return cart.reduce((total, item) => total + item.quantity, 0);
   };
 
