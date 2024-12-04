@@ -1,6 +1,6 @@
 import { Product } from "../App";
-import removeIcon from "/images/icon-remove-item.svg";
-import carbonNeutralIcon from "/images/icon-carbon-neutral.svg";
+import removeIcon from "/product-list-with-cart/images/icon-remove-item.svg";
+import carbonNeutralIcon from "/product-list-with-cart/images/icon-carbon-neutral.svg";
 
 interface CartProps {
   cartItems: { product: Product; quantity: number }[];
