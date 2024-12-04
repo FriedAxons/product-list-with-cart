@@ -1,5 +1,6 @@
 import { Product } from "../App";
-import removeIcon from "../../public/images/icon-remove-item.svg";
+import removeIcon from "/images/icon-remove-item.svg";
+import carbonNeutralIcon from "/images/icon-carbon-neutral.svg";
 
 interface CartProps {
   cartItems: { product: Product; quantity: number }[];
@@ -35,6 +36,10 @@ const Cart = ({
     <div className="total">
       <p>Order Total ${total}</p>
     </div>
+    <p>
+      <img src={carbonNeutralIcon} alt="Carbon neutral icon" />
+      This is a <span>carbon-neutral</span> delivery
+    </p>
     <button onClick={confirmOrder} disabled={cartItems.length === 0}>
       Confirm Order
     </button>
