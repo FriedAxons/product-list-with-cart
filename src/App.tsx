@@ -71,7 +71,7 @@ const App = () => {
   return (
     <div className="app-container">
       <Header cartCount={calculateCartCount()} />
-      <div className="main-content">
+      <div className="main-content flex">
         <ProductList products={products} addToCart={handleAddToCart} />
         <Cart
           cartItems={cart}
