@@ -1,5 +1,5 @@
 import { Product } from "../App";
-import confirmedIcon from "../../public/images/icon-order-confirmed.svg";
+import confirmedIcon from "/product-list-with-cart/images/icon-order-confirmed.svg";
 
 interface ModalProps {
   cartItems: { product: Product; quantity: number }[];

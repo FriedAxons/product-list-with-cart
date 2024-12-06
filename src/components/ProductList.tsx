@@ -11,6 +11,7 @@ const ProductList = ({ products, addToCart }: ProductListProps) => (
     {products.map((product) => (
       <div key={product.name} className="product-card">
         <img
+          className="w-[220px] rounded-md"
           srcSet={`${product.image.mobile} 375w, ${product.image.desktop} 1440w`}
           sizes="(max-width: 375px) 375px, 1280px"
           src={product.image.desktop}
