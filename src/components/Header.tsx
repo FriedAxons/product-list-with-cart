@@ -7,7 +7,9 @@ const Header = ({ cartCount }: HeaderProps) => {
     <header className="header flex flex-row justify-between">
       <h1 className="text-3xl font-bold text-rose-900">Desserts</h1>
       <div>
-        <h2>Your Cart ({cartCount})</h2>
+        <h2 className="text-[20px] font-bold text-red">
+          Your Cart ({cartCount})
+        </h2>
       </div>
     </header>
   );
