@@ -6,4 +6,8 @@
   #root {
     @apply font-red-hat-text;
   }
+
+  .app-container {
+    @apply p-20;
+  }
 }
