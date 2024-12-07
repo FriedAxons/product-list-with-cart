@@ -18,13 +18,13 @@ const Cart = ({
 }: CartProps) => (
   <div className="cart">
     {cartItems.length === 0 ? (
-      <div className="empty-cart">
+      <div className="empty-cart flex flex-col justify-center items-center text-center">
         <img
           src={emptyCartIcon}
           alt="Empty Cart Icon"
-          className="empty-cart-icon"
+          className="empty-cart-icon mb-4"
         />
-        <p>Your added items will appear here.</p>
+        <p className="text-rose-500">Your added items will appear here</p>
       </div>
     ) : (
       <>
