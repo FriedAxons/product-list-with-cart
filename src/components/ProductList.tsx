@@ -16,7 +16,7 @@ const ProductList = ({
   addToCart,
   removeFromCart,
 }: ProductListProps) => (
-  <div className="product-list">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
     {products.map((product) => {
       const cartItem = cartItems.find(
         (item) => item.product.name === product.name
@@ -25,7 +25,6 @@ const ProductList = ({
 
       return (
         <div key={product.name} className="product-card">
-          {/* Responsive Image */}
           <img
             className="w-[220px] rounded-md"
             srcSet={`${product.image.mobile} 375w, ${product.image.desktop} 1440w`}
