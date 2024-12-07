@@ -72,7 +72,12 @@ const App = () => {
     <div className="app-container">
       <Header cartCount={calculateCartCount()} />
       <div className="main-content flex">
-        <ProductList products={products} addToCart={handleAddToCart} />
+        <ProductList
+          products={products}
+          cartItems={cart}
+          addToCart={handleAddToCart}
+          removeFromCart={handleRemoveFromCart}
+        />
         <Cart
           cartItems={cart}
           total={calculateTotal()}
