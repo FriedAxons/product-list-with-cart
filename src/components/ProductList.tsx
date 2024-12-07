@@ -24,7 +24,7 @@ const ProductList = ({
       const quantity = cartItem ? cartItem.quantity : 0;
 
       return (
-        <div key={product.name} className="product-card">
+        <div key={product.name} className="product-card relative">
           <img
             className="w-[220px] rounded-md"
             srcSet={`${product.image.mobile} 375w, ${product.image.desktop} 1440w`}
@@ -33,26 +33,33 @@ const ProductList = ({
             alt={product.name}
           />
 
-          {quantity === 0 ? (
-            <button onClick={() => addToCart(product)}>
-              <img src={cartIcon} alt="Cart Icon" />
-              Add to Cart
-            </button>
-          ) : (
-            <div className="quantity-controls">
-              <button onClick={() => removeFromCart(product.name)}>
-                <img src={minusIcon} alt="Minus Icon" />
+          <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 z-10">
+            {quantity === 0 ? (
+              <button
+                onClick={() => addToCart(product)}
+                className="flex flex-row border border-rose-500"
+              >
+                <img src={cartIcon} alt="Cart Icon" />
+                Add to Cart
               </button>
-              <span>{quantity}</span>
-              <button onClick={() => addToCart(product)}>
-                <img src={plusIcon} alt="Plus Icon" />
-              </button>
-            </div>
-          )}
+            ) : (
+              <div className="quantity-controls">
+                <button onClick={() => removeFromCart(product.name)}>
+                  <img src={minusIcon} alt="Minus Icon" />
+                </button>
+                <span>{quantity}</span>
+                <button onClick={() => addToCart(product)}>
+                  <img src={plusIcon} alt="Plus Icon" />
+                </button>
+              </div>
+            )}
+          </div>
 
-          <p>{product.category}</p>
-          <h3>{product.name}</h3>
-          <p>${product.price.toFixed(2)}</p>
+          <div className="product-info mt-4">
+            <p>{product.category}</p>
+            <h3>{product.name}</h3>
+            <p>${product.price.toFixed(2)}</p>
+          </div>
         </div>
       );
     })}
