@@ -40,26 +40,28 @@ const ProductList = ({
             {quantity === 0 ? (
               <button
                 onClick={() => addToCart(product)}
-                className="flex flex-row border border-rose-500 pt-2 pb-2 pl-7 pr-7 bg-white rounded-3xl text-rose-900 font-medium"
+                className="flex flex-row border border-rose-500 pt-2 pb-2 pl-6 pr-6 bg-white rounded-3xl text-rose-900 font-medium"
               >
                 <img src={cartIcon} alt="Cart Icon" className="mr-2" />
                 Add to Cart
               </button>
             ) : (
               <div className="quantity-controls flex flex-row border border-red pt-2 pb-2 bg-red rounded-3xl text-rose-50">
-                <button onClick={() => removeFromCart(product.name)}>
+                <button>
                   <img
                     src={minusIcon}
                     alt="Minus Icon"
-                    className="mr-[57px] ml-4"
+                    className="mr-[53px] ml-4"
+                    onClick={() => removeFromCart(product.name)}
                   />
                 </button>
                 <span>{quantity}</span>
-                <button onClick={() => addToCart(product)}>
+                <button>
                   <img
                     src={plusIcon}
                     alt="Plus Icon"
-                    className="ml-[57px] mr-4"
+                    className="ml-[53px] mr-4"
+                    onClick={() => addToCart(product)}
                   />
                 </button>
               </div>
