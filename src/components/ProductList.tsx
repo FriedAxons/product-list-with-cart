@@ -46,13 +46,21 @@ const ProductList = ({
                 Add to Cart
               </button>
             ) : (
-              <div className="quantity-controls">
+              <div className="quantity-controls flex flex-row border border-red pt-2 pb-2 bg-red rounded-3xl text-rose-50">
                 <button onClick={() => removeFromCart(product.name)}>
-                  <img src={minusIcon} alt="Minus Icon" />
+                  <img
+                    src={minusIcon}
+                    alt="Minus Icon"
+                    className="mr-[57px] ml-4"
+                  />
                 </button>
                 <span>{quantity}</span>
                 <button onClick={() => addToCart(product)}>
-                  <img src={plusIcon} alt="Plus Icon" />
+                  <img
+                    src={plusIcon}
+                    alt="Plus Icon"
+                    className="ml-[57px] mr-4"
+                  />
                 </button>
               </div>
             )}

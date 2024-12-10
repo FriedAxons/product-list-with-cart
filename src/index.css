@@ -8,6 +8,6 @@
   }
 
   .app-container {
-    @apply pt-20 pr-40 pb-20 pl-28;
+    @apply pt-20 pr-0 pb-20 pl-24;
   }
 }

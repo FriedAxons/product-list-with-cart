@@ -91,7 +91,7 @@ const App = () => {
             removeFromCart={handleRemoveFromCart}
           />
         </div>
-        <div className="cart w-full lg:w-[20%] ml-auto">
+        <div className="cart w-full lg:w-[35%]">
           <Cart
             cartItems={cart}
             total={calculateTotal()}

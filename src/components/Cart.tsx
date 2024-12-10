@@ -24,7 +24,9 @@ const Cart = ({
           alt="Empty Cart Icon"
           className="empty-cart-icon mb-4"
         />
-        <p className="text-rose-500">Your added items will appear here</p>
+        <p className="text-rose-500 font-medium">
+          Your added items will appear here
+        </p>
       </div>
     ) : (
       <>
