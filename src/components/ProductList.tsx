@@ -36,11 +36,11 @@ const ProductList = ({
             alt={product.name}
           />
 
-          <div className="absolute bottom-[80px] left-1/2 transform -translate-x-1/2 z-10">
+          <div className="absolute bottom-[101px] left-1/2 transform -translate-x-1/2 z-10">
             {quantity === 0 ? (
               <button
                 onClick={() => addToCart(product)}
-                className="flex flex-row border border-rose-500 pt-2 pb-2 pl-6 pr-6 bg-white rounded-3xl text-rose-900 font-medium"
+                className="flex flex-row border border-rose-500 pt-2 pb-2 pl-6 pr-6 bg-white rounded-3xl text-rose-900 font-medium hover:text-red hover:border-red"
               >
                 <img src={cartIcon} alt="Cart Icon" className="mr-2" />
                 Add to Cart
@@ -51,7 +51,7 @@ const ProductList = ({
                   <img
                     src={minusIcon}
                     alt="Minus Icon"
-                    className="mr-[53px] ml-4"
+                    className="mr-[53px] ml-4 rounded-full"
                     onClick={() => removeFromCart(product.name)}
                   />
                 </button>
@@ -68,10 +68,12 @@ const ProductList = ({
             )}
           </div>
 
-          <div className="product-info mt-4">
-            <p>{product.category}</p>
-            <h3>{product.name}</h3>
-            <p>${product.price.toFixed(2)}</p>
+          <div className="product-info mt-10">
+            <p className="text-[15px] text-rose-400">{product.category}</p>
+            <h3 className="text-rose-900 font-semibold">{product.name}</h3>
+            <p className="text-red font-semibold">
+              ${product.price.toFixed(2)}
+            </p>
           </div>
         </div>
       );
