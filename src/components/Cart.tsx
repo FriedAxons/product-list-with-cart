@@ -57,14 +57,28 @@ const Cart = ({
             </button>
           </div>
         ))}
-        <div className="total">
-          <p>Order Total ${total}</p>
+        <div className="total mt-10 mb-10">
+          <p className="flex flex-row justify-between items-center pr-32 text-sm">
+            Order Total <span className="font-bold text-2xl">${total}</span>
+          </p>
         </div>
-        <p>
-          <img src={carbonNeutralIcon} alt="Carbon neutral icon" />
-          This is a <span>carbon-neutral</span> delivery
+        <p className="mb-8 ml-9 flex flex-row items-center font-medium text-sm text-rose-500">
+          <img
+            src={carbonNeutralIcon}
+            alt="Carbon neutral icon"
+            className="mr-2"
+          />
+          This is a
+          <span className="ml-[2px] mr-[2px] font-semibold text-rose-900">
+            carbon-neutral
+          </span>
+          delivery
         </p>
-        <button onClick={confirmOrder} disabled={cartItems.length === 0}>
+        <button
+          onClick={confirmOrder}
+          disabled={cartItems.length === 0}
+          className="w-[313.31px] bg-red text-rose-50 p-3 rounded-full hover:bg-red-hover"
+        >
           Confirm Order
         </button>
       </>

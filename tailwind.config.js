@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         red: "hsl(14, 86%, 42%)", // Custom red
+        "red-hover": "hsl(14, 86%, 36%)", // Darker custom red for hover
         green: "hsl(159, 69%, 38%)", // Custom green
         rose: {
           50: "hsl(20, 50%, 98%)",
