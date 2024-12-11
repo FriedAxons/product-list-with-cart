@@ -16,7 +16,7 @@ const Cart = ({
   removeFromCart,
   confirmOrder,
 }: CartProps) => (
-  <div className="cart">
+  <div className="cart ml-14">
     {cartItems.length === 0 ? (
       <div className="empty-cart flex flex-col justify-center items-center text-center">
         <img
@@ -33,10 +33,17 @@ const Cart = ({
         {cartItems.map(({ product, quantity }) => (
           <div key={product.name} className="cart-item">
             <div className="cart-item-details">
-              <p>{product.name}</p>
+              <p className="text-[14px] text-rose-900 font-semibold mb-2">
+                {product.name}
+              </p>
               <p>
-                {quantity}x @ ${product.price.toFixed(2)} $
-                {(product.price * quantity).toFixed(2)}
+                <span className="text-red font-semibold mr-3">{quantity}x</span>
+                <span className="text-rose-400 text-[14px] mr-2">
+                  @ ${product.price.toFixed(2)}
+                </span>
+                <span className="text-rose-500 text-[14px] font-semibold">
+                  ${(product.price * quantity).toFixed(2)}
+                </span>
               </p>
             </div>
             <button
