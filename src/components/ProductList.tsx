@@ -16,7 +16,7 @@ const ProductList = ({
   addToCart,
   removeFromCart,
 }: ProductListProps) => (
-  <div className="product-list w-full flex flex-wrap gap-y-6">
+  <div className="product-list w-full flex flex-wrap gap-y-6 pr-10">
     {products.map((product) => {
       const cartItem = cartItems.find(
         (item) => item.product.name === product.name

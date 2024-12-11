@@ -18,7 +18,7 @@ const Cart = ({
 }: CartProps) => (
   <div className="cart ml-14">
     {cartItems.length === 0 ? (
-      <div className="empty-cart flex flex-col justify-center items-center text-center">
+      <div className="empty-cart flex flex-col justify-center items-center text-center pr-40">
         <img
           src={emptyCartIcon}
           alt="Empty Cart Icon"
@@ -31,9 +31,12 @@ const Cart = ({
     ) : (
       <>
         {cartItems.map(({ product, quantity }) => (
-          <div key={product.name} className="cart-item">
+          <div
+            key={product.name}
+            className="cart-item flex flex-row w-full justify-between pr-32"
+          >
             <div className="cart-item-details">
-              <p className="text-[14px] text-rose-900 font-semibold mb-2">
+              <p className="text-[14px] text-rose-900 font-semibold mb-1">
                 {product.name}
               </p>
               <p>
@@ -48,9 +51,9 @@ const Cart = ({
             </div>
             <button
               onClick={() => removeFromCart(product.name)}
-              className="remove-button"
+              className="remove-button flex justify-center items-center w-[16px] h-[15px] rounded-full border border-rose-400 mt-auto mb-auto"
             >
-              <img src={removeIcon} alt="Remove Icon" width={24} height={24} />
+              <img src={removeIcon} alt="Remove Icon" width={10} height={10} />
             </button>
           </div>
         ))}
