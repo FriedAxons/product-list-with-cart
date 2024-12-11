@@ -46,21 +46,21 @@ const ProductList = ({
                 Add to Cart
               </button>
             ) : (
-              <div className="quantity-controls flex flex-row border border-red pt-2 pb-2 bg-red rounded-3xl text-rose-50">
-                <button>
+              <div className="quantity-controls flex flex-row items-center border border-red pt-2 pb-2 pl-3 pr-3 bg-red rounded-3xl text-rose-50">
+                <button className="w-[18px] h-[18px] rounded-full border border-rose-50 hover:bg-rose-50 mr-12">
                   <img
                     src={minusIcon}
                     alt="Minus Icon"
-                    className="mr-[53px] ml-4 rounded-full"
+                    className="ml-[3px] w-[10.5px] h-[10px]"
                     onClick={() => removeFromCart(product.name)}
                   />
                 </button>
                 <span>{quantity}</span>
-                <button>
+                <button className="w-[18px] h-[18px] rounded-full border border-rose-50 hover:bg-rose-50 ml-12">
                   <img
                     src={plusIcon}
                     alt="Plus Icon"
-                    className="ml-[53px] mr-4"
+                    className="ml-[3px] w-[10.5px] h-[10px]"
                     onClick={() => addToCart(product)}
                   />
                 </button>
