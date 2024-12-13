@@ -1,5 +1,4 @@
 import { Product } from "../App";
-import removeIcon from "/product-list-with-cart/images/icon-remove-item.svg";
 import carbonNeutralIcon from "/product-list-with-cart/images/icon-carbon-neutral.svg";
 import emptyCartIcon from "/product-list-with-cart/images/illustration-empty-cart.svg";
 
@@ -51,9 +50,17 @@ const Cart = ({
             </div>
             <button
               onClick={() => removeFromCart(product.name)}
-              className="remove-button flex justify-center items-center w-[16px] h-[15px] rounded-full border border-rose-400 mt-auto mb-auto"
+              className="remove-button flex justify-center items-center w-[16px] h-[15px] rounded-full border border-rose-400 hover:border-rose-900 mt-auto mb-auto text-svgColor hover:text-rose-900"
             >
-              <img src={removeIcon} alt="Remove Icon" width={10} height={10} />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="10"
+                height="10"
+                fill="currentColor"
+                viewBox="0 0 10 10"
+              >
+                <path d="M8.375 9.375 5 6 1.625 9.375l-1-1L4 5 .625 1.625l1-1L5 4 8.375.625l1 1L6 5l3.375 3.375-1 1Z" />
+              </svg>
             </button>
           </div>
         ))}

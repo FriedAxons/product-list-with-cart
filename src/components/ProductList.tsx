@@ -1,7 +1,5 @@
 import { Product } from "../App";
 import cartIcon from "/product-list-with-cart/images/icon-add-to-cart.svg";
-import minusIcon from "/product-list-with-cart/images/icon-decrement-quantity.svg";
-import plusIcon from "/product-list-with-cart/images/icon-increment-quantity.svg";
 
 interface ProductListProps {
   products: Product[];
@@ -47,22 +45,36 @@ const ProductList = ({
               </button>
             ) : (
               <div className="quantity-controls flex flex-row items-center border border-red pt-2 pb-2 pl-3 pr-3 bg-red rounded-3xl text-rose-50">
-                <button className="w-[18px] h-[18px] rounded-full border border-rose-50 hover:bg-rose-50 mr-12">
-                  <img
-                    src={minusIcon}
-                    alt="Minus Icon"
+                <button
+                  className="w-[18px] h-[18px] rounded-full border border-rose-50 hover:bg-rose-50 mr-12 hover:text-red"
+                  onClick={() => removeFromCart(product.name)}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="2"
+                    fill="currentColor"
+                    viewBox="0 0 10 2"
                     className="ml-[3px] w-[10.5px] h-[10px]"
-                    onClick={() => removeFromCart(product.name)}
-                  />
+                  >
+                    <path d="M0 .375h10v1.25H0V.375Z" />
+                  </svg>
                 </button>
                 <span>{quantity}</span>
-                <button className="w-[18px] h-[18px] rounded-full border border-rose-50 hover:bg-rose-50 ml-12">
-                  <img
-                    src={plusIcon}
-                    alt="Plus Icon"
+                <button
+                  className="w-[18px] h-[18px] rounded-full border border-rose-50 hover:bg-rose-50 ml-12 hover:text-red"
+                  onClick={() => addToCart(product)}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="10"
+                    fill="currentColor"
+                    viewBox="0 0 10 10"
                     className="ml-[3px] w-[10.5px] h-[10px]"
-                    onClick={() => addToCart(product)}
-                  />
+                  >
+                    <path d="M10 4.375H5.625V0h-1.25v4.375H0v1.25h4.375V10h1.25V5.625H10v-1.25Z" />
+                  </svg>
                 </button>
               </div>
             )}
