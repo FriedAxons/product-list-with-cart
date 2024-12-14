@@ -69,12 +69,12 @@ const Cart = ({
             </button>
           </div>
         ))}
-        <div className="total pl-14 mt-2 mb-9 lg:mt-10 lg:mb-10">
+        <div className="total pl-14 mt-2 mb-9 lg:pl-0 lg:mt-10 lg:mb-10">
           <p className="flex flex-row justify-between items-center pr-11 lg:pr-32 text-sm">
             Order Total <span className="font-bold text-2xl">${total}</span>
           </p>
         </div>
-        <p className="mb-8 ml-16 lg:ml-9 flex flex-row items-center font-medium text-sm text-rose-500">
+        <p className="mb-8 ml-16 lg:ml-20 flex flex-row items-center font-medium text-sm text-rose-500">
           <img
             src={carbonNeutralIcon}
             alt="Carbon neutral icon"
