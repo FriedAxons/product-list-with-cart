@@ -27,7 +27,7 @@ const ProductList = ({
           className="product-card relative w-full sm:w-1/2 lg:w-1/3 pt-0 pl-5 pr-5 pb-0 lg:p-3"
         >
           <img
-            className={`w-full rounded-lg h-[220px] lg:h-auto object-cover${
+            className={`w-full rounded-lg h-[220px] lg:h-auto object-cover ${
               cartItem ? "outline outline-2 outline-red" : ""
             }`}
             src={product.image.desktop}

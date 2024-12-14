@@ -17,8 +17,8 @@ const Cart = ({
   removeFromCart,
   confirmOrder,
 }: CartProps) => (
-  <div className="relative pt-24 pb-20 lg:pt-6 lg:ml-14">
-    <h2 className="absolute left-[4.5rem] top-[2rem] lg:left-[-0.5rem] lg:top-[-3.1rem] text-xl font-bold text-red w-full">
+  <div className="relative pt-32 pb-16 lg:pt-6 lg:ml-14">
+    <h2 className="absolute left-[3.5rem] top-[4rem] lg:left-[-0.5rem] lg:top-[-3.1rem] text-[23px] lg:text-xl font-bold text-red lg:w-full">
       Your Cart ({cartCount})
     </h2>
     {cartItems.length === 0 ? (
