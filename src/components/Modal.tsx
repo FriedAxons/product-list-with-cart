@@ -10,7 +10,7 @@ interface ModalProps {
 const Modal = ({ cartItems, total, onNewOrder }: ModalProps) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-      <div className="bg-rose-50 rounded-xl pt-9 pr-14 pb-9 pl-10 shadow-lg w-3/4 max-w-xl">
+      <div className="bg-rose-50 rounded-xl pt-9 pr-14 pb-9 pl-10 shadow-lg lg:w-3/4 lg:max-w-xl">
         <img
           src={confirmedIcon}
           alt="Confirmed Icon"
