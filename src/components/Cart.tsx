@@ -4,6 +4,7 @@ import emptyCartIcon from "/product-list-with-cart/images/illustration-empty-car
 
 interface CartProps {
   cartItems: { product: Product; quantity: number }[];
+  cartCount: number;
   total: string;
   removeFromCart: (productName: string) => void;
   confirmOrder: () => void;
@@ -12,10 +13,14 @@ interface CartProps {
 const Cart = ({
   cartItems,
   total,
+  cartCount,
   removeFromCart,
   confirmOrder,
 }: CartProps) => (
-  <div className="cart ml-14">
+  <div className="relative cart ml-14">
+    <h2 className="absolute top-[-3rem] text-xl font-bold text-red w-full">
+      Your Cart ({cartCount})
+    </h2>
     {cartItems.length === 0 ? (
       <div className="empty-cart flex flex-col justify-center items-center text-center pr-40">
         <img

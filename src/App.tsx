@@ -81,7 +81,7 @@ const App = () => {
   */
   return (
     <div className="app-container">
-      <Header cartCount={calculateCartCount()} />
+      <Header />
       <div className="main-content flex flex-col lg:flex-row">
         <div className="product-list w-full lg:w-[80%] flex flex-wrap gap-y-6">
           <ProductList
@@ -93,6 +93,7 @@ const App = () => {
         </div>
         <div className="cart w-full lg:w-[35%]">
           <Cart
+            cartCount={calculateCartCount()}
             cartItems={cart}
             total={calculateTotal()}
             removeFromCart={handleRemoveFromCart}
