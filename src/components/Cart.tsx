@@ -17,8 +17,8 @@ const Cart = ({
   removeFromCart,
   confirmOrder,
 }: CartProps) => (
-  <div className="relative pt-32 pb-16 lg:pt-2 lg:ml-2">
-    <h2 className="absolute left-[3.5rem] lg:left-[0rem] top-[4rem] lg:left-[-0.5rem] lg:top-[-3.1rem] text-[23px] lg:text-xl font-bold text-red lg:w-full">
+  <div className="relative pt-28 pb-16 lg:pt-2 lg:ml-2">
+    <h2 className="absolute left-[3.5rem] lg:left-[0rem] top-[3.5rem] lg:left-[-0.5rem] lg:top-[-3.1rem] text-[23px] lg:text-xl font-bold text-red lg:w-full">
       Your Cart ({cartCount})
     </h2>
     {cartItems.length === 0 ? (
@@ -37,7 +37,7 @@ const Cart = ({
         {cartItems.map(({ product, quantity }) => (
           <div
             key={product.name}
-            className="cart-item flex flex-row w-full justify-between pl-14 lg:pl-0 lg:pr-32 lg:pb-6"
+            className="cart-item flex flex-row w-full justify-between pl-14 pr-11 pb-6 lg:pl-0 lg:pr-32 lg:pb-6"
           >
             <div className="cart-item-details">
               <p className="text-[14px] text-rose-900 font-semibold mb-1">
@@ -69,8 +69,8 @@ const Cart = ({
             </button>
           </div>
         ))}
-        <div className="total mt-10 mb-10">
-          <p className="flex flex-row justify-between items-center pr-32 text-sm">
+        <div className="total pl-14 mt-2 mb-9 lg:mt-10 lg:mb-10">
+          <p className="flex flex-row justify-between items-center pr-11 lg:pr-32 text-sm">
             Order Total <span className="font-bold text-2xl">${total}</span>
           </p>
         </div>
