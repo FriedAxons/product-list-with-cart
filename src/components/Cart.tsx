@@ -17,7 +17,7 @@ const Cart = ({
   removeFromCart,
   confirmOrder,
 }: CartProps) => (
-  <div className="relative pt-28 pb-16 lg:pt-2 lg:ml-2">
+  <div className="relative pt-28 pb-14 lg:pt-2 lg:ml-2">
     <h2 className="absolute left-[3.5rem] lg:left-[0rem] top-[3.5rem] lg:left-[-0.5rem] lg:top-[-3.1rem] text-[23px] lg:text-xl font-bold text-red lg:w-full">
       Your Cart ({cartCount})
     </h2>
@@ -74,7 +74,7 @@ const Cart = ({
             Order Total <span className="font-bold text-2xl">${total}</span>
           </p>
         </div>
-        <p className="mb-8 ml-9 flex flex-row items-center font-medium text-sm text-rose-500">
+        <p className="mb-8 ml-16 lg:ml-9 flex flex-row items-center font-medium text-sm text-rose-500">
           <img
             src={carbonNeutralIcon}
             alt="Carbon neutral icon"
@@ -89,7 +89,7 @@ const Cart = ({
         <button
           onClick={confirmOrder}
           disabled={cartItems.length === 0}
-          className="w-[313.31px] bg-red text-rose-50 p-3 rounded-full hover:bg-red-hover"
+          className="w-[281px] ml-11 lg:w-[313.31px] bg-red text-rose-50 p-3 rounded-full hover:bg-red-hover"
         >
           Confirm Order
         </button>
