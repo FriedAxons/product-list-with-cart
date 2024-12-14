@@ -80,7 +80,7 @@ const App = () => {
     The layout is fully responsive, so the components will behave appropriately on mobile and desktop, and the app-container remains the overarching wrapper for all content.
   */
   return (
-    <div className="app-container">
+    <div className="lg:pt-20 lg:pr-0 lg:pb-20 lg:pl-24">
       <Header />
       <div className="main-content flex flex-col lg:flex-row">
         <div className="product-list w-full lg:w-[80%] flex flex-wrap gap-y-6">

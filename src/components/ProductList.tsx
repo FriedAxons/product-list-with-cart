@@ -14,7 +14,7 @@ const ProductList = ({
   addToCart,
   removeFromCart,
 }: ProductListProps) => (
-  <div className="product-list w-full flex flex-wrap gap-y-6 pr-10">
+  <div className="product-list w-full flex flex-wrap gap-y-6 pr-0 lg:pr-10">
     {products.map((product) => {
       const cartItem = cartItems.find(
         (item) => item.product.name === product.name
@@ -24,14 +24,12 @@ const ProductList = ({
       return (
         <div
           key={product.name}
-          className="product-card relative w-full sm:w-1/2 lg:w-1/3 p-3"
+          className="product-card relative w-full sm:w-1/2 lg:w-1/3 p-5 lg:p-3"
         >
           <img
-            className={`w-full rounded-lg ${
+            className={`w-full rounded-lg h-[220px] object-cover${
               cartItem ? "outline outline-2 outline-red" : ""
             }`}
-            srcSet={`${product.image.mobile} 375w, ${product.image.desktop} 1440w`}
-            sizes="(max-width: 375px) 375px, 1280px"
             src={product.image.desktop}
             alt={product.name}
           />
