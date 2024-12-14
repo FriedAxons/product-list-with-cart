@@ -17,12 +17,12 @@ const Cart = ({
   removeFromCart,
   confirmOrder,
 }: CartProps) => (
-  <div className="relative cart ml-14">
-    <h2 className="absolute top-[-3.1rem] text-xl font-bold text-red w-full">
+  <div className="relative pt-24 pb-20 lg:pt-6 lg:ml-14">
+    <h2 className="absolute left-[4.5rem] top-[2rem] lg:left-[-0.5rem] lg:top-[-3.1rem] text-xl font-bold text-red w-full">
       Your Cart ({cartCount})
     </h2>
     {cartItems.length === 0 ? (
-      <div className="empty-cart flex flex-col justify-center items-center text-center pr-40">
+      <div className="empty-cart flex flex-col justify-center items-center text-center lg:pr-40">
         <img
           src={emptyCartIcon}
           alt="Empty Cart Icon"
