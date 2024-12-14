@@ -27,7 +27,9 @@ const ProductList = ({
           className="product-card relative w-full sm:w-1/2 lg:w-1/3 p-3"
         >
           <img
-            className="w-full rounded-lg"
+            className={`w-full rounded-lg ${
+              cartItem ? "border-2 border-red" : ""
+            }`}
             srcSet={`${product.image.mobile} 375w, ${product.image.desktop} 1440w`}
             sizes="(max-width: 375px) 375px, 1280px"
             src={product.image.desktop}
