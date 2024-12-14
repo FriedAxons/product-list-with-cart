@@ -18,7 +18,7 @@ const Cart = ({
   confirmOrder,
 }: CartProps) => (
   <div className="relative cart ml-14">
-    <h2 className="absolute top-[-3rem] text-xl font-bold text-red w-full">
+    <h2 className="absolute top-[-3.1rem] text-xl font-bold text-red w-full">
       Your Cart ({cartCount})
     </h2>
     {cartItems.length === 0 ? (
