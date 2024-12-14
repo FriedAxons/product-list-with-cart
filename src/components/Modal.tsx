@@ -10,28 +10,28 @@ interface ModalProps {
 const Modal = ({ cartItems, total, onNewOrder }: ModalProps) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-      <div className="bg-rose-50 rounded-xl pt-9 pr-14 pb-9 pl-10 shadow-lg lg:w-3/4 lg:max-w-xl">
+      <div className="bg-rose-50 rounded-xl pt-9 lg:pr-14 pr-12 pb-9 lg:pl-10 pl-6 shadow-lg lg:w-3/4 lg:max-w-xl lg:h-auto h-[calc(100vh-3rem)] lg:mt-0 mt-28">
         <img
           src={confirmedIcon}
           alt="Confirmed Icon"
-          className="w-11 h-11 mb-6"
+          className="lg:w-11 lg:h-11 w-14 h-14 mb-6"
         />
-        <h2 className="text-4xl text-rose-900 font-bold mb-2">
+        <h2 className="lg:text-4xl text-[40px] text-rose-900 lg:font-bold font-extrabold mb-2">
           Order Confirmed
         </h2>
-        <p className="text-sm text-rose-500 mb-10">
+        <p className="lg:text-sm text-rose-500 lg:mb-10 mb-12">
           We hope you enjoy your food!
         </p>
-        <div className="pl-4 pb-6">
+        <div className="pl-4 pb-7">
           {cartItems.map(({ product, quantity }) => (
-            <div key={product.name} className="flex items-center mb-4">
+            <div key={product.name} className="flex items-center lg:mb-4 mb-9">
               <img
                 src={product.image.thumbnail}
                 alt={product.name}
-                className="w-13 h-12 rounded-md mr-4"
+                className="object-cover w-13 lg:h-12 h-[55px] rounded-md mr-4"
               />
               <div className="flex-1">
-                <p className="text-xs text-rose-900 font-semibold mb-1">
+                <p className="lg:text-xs text-[15px] text-rose-900 font-semibold mb-1 truncate">
                   {product.name}
                 </p>
                 <p className="text-red">
@@ -48,12 +48,14 @@ const Modal = ({ cartItems, total, onNewOrder }: ModalProps) => {
           ))}
         </div>
         <div className="flex justify-between items-center pb-12">
-          <p className="text-sm text-rose-500 font-medium">Order Total</p>
+          <p className="text-sm text-rose-500 pl-[16px] font-medium">
+            Order Total
+          </p>
           <p className="text-2xl text-rose-900 font-extrabold">${total}</p>
         </div>
         <button
           onClick={onNewOrder}
-          className="bg-red w-full text-rose-50 p-3 rounded-full"
+          className="lg:right-2 right-5 bg-red lg:w-full lg:w-[105%] w-[90%] text-rose-50 lg:p-3 pt-4 pb-4 rounded-full"
         >
           Start New Order
         </button>
