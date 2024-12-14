@@ -24,7 +24,7 @@ const ProductList = ({
       return (
         <div
           key={product.name}
-          className="product-card relative w-full sm:w-1/2 lg:w-1/3 p-5 lg:p-3"
+          className="product-card relative w-full sm:w-1/2 lg:w-1/3 pt-0 pl-5 pr-5 pb-0 lg:p-3"
         >
           <img
             className={`w-full rounded-lg h-[220px] object-cover${
@@ -34,7 +34,7 @@ const ProductList = ({
             alt={product.name}
           />
 
-          <div className="absolute bottom-[101px] left-1/2 transform -translate-x-1/2 z-10">
+          <div className="absolute bottom-[91px] lg:bottom-[101px] left-1/2 transform -translate-x-1/2 z-10">
             {quantity === 0 ? (
               <button
                 onClick={() => addToCart(product)}
