@@ -1,5 +1,4 @@
 import { Product } from "../App";
-import confirmedIcon from "/product-list-with-cart/images/icon-order-confirmed.svg";
 
 interface ModalProps {
   cartItems: { product: Product; quantity: number }[];
@@ -18,7 +17,7 @@ const Modal = ({ cartItems, total, onNewOrder }: ModalProps) => {
       >
         {/* Header Section */}
         <img
-          src={confirmedIcon}
+          src="/images/icon-order-confirmed.svg"
           alt="Confirmed Icon"
           className="lg:w-11 lg:h-11 w-14 h-14 mb-6"
         />
