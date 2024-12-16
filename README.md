@@ -39,8 +39,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://your-solution-url.com)
-- Live Site URL: [GitHub Live Page](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/product-list-with-cart-solution-fJuJ2brZ81)
+- Live Site URL: [GitHub Live Page](https://friedaxons.github.io/product-list-with-cart/)
 
 ### Built with
 
