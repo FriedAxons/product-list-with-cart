@@ -17,7 +17,7 @@ const Modal = ({ cartItems, total, onNewOrder }: ModalProps) => {
       >
         {/* Header Section */}
         <img
-          src="/images/icon-order-confirmed.svg"
+          src="/product-list-with-cart/images/icon-order-confirmed.svg"
           alt="Confirmed Icon"
           className="lg:w-11 lg:h-11 w-14 h-14 mb-6"
         />

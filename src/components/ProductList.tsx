@@ -40,7 +40,7 @@ const ProductList = ({
                 className="flex flex-row border border-rose-500 pt-2 pb-2 pl-6 pr-6 bg-white rounded-3xl text-rose-900 font-medium hover:text-red hover:border-red"
               >
                 <img
-                  src="/images/icon-add-to-cart.svg"
+                  src="/product-list-with-cart/images/icon-add-to-cart.svg"
                   alt="Cart Icon"
                   className="mr-2"
                 />
