@@ -31,7 +31,7 @@ const Modal = ({ cartItems, total, onNewOrder }: ModalProps) => {
 
         {/* Scrollable Content Section */}
         <div
-          className="rounded-t-lg flex-1 overflow-y-auto px-4 lg:pt-5 lg:pl-5 lg:pr-6 lg:pb-7 pb-3"
+          className="rounded-t-lg flex-1 overflow-y-auto px-4 lg:pt-5 lg:pl-5 lg:pr-6 lg:pb-0 pb-3"
           style={{
             maxHeight: "calc(100vh - 15rem)", // Scrollable content constrained
           }}
