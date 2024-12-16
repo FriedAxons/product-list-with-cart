@@ -1,5 +1,4 @@
 import { Product } from "../App";
-import cartIcon from "/product-list-with-cart/images/icon-add-to-cart.svg";
 
 interface ProductListProps {
   products: Product[];
@@ -40,7 +39,11 @@ const ProductList = ({
                 onClick={() => addToCart(product)}
                 className="flex flex-row border border-rose-500 pt-2 pb-2 pl-6 pr-6 bg-white rounded-3xl text-rose-900 font-medium hover:text-red hover:border-red"
               >
-                <img src={cartIcon} alt="Cart Icon" className="mr-2" />
+                <img
+                  src="/images/icon-add-to-cart.svg"
+                  alt="Cart Icon"
+                  className="mr-2"
+                />
                 Add to Cart
               </button>
             ) : (
