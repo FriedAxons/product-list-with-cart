@@ -30,7 +30,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Desktop Solution](src/assets/screenshots/desktop_solution.png)
+![Desktop Active Solution](src/assets/screenshots/desktop_active_solution.png)
+![Desktop Modal Solution](src/assets/screenshots/desktop_modal.png)
+![Mobile Solution](src/assets/screenshots/mobile_solution.png)
+![Mobile Active Solution](src/assets/screenshots/mobile_active_solution.png)
+![Mobile Modal Solution](src/assets/screenshots/mobile_modal.png)
 
 ### Links
 
