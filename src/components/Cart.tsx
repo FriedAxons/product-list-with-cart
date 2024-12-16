@@ -1,6 +1,4 @@
 import { Product } from "../App";
-import carbonNeutralIcon from "/product-list-with-cart/images/icon-carbon-neutral.svg";
-import emptyCartIcon from "/product-list-with-cart/images/illustration-empty-cart.svg";
 
 interface CartProps {
   cartItems: { product: Product; quantity: number }[];
@@ -24,7 +22,7 @@ const Cart = ({
     {cartItems.length === 0 ? (
       <div className="empty-cart flex flex-col justify-center items-center text-center lg:pr-40">
         <img
-          src={emptyCartIcon}
+          src="/images/illustration-empty-cart.svg"
           alt="Empty Cart Icon"
           className="empty-cart-icon mb-4"
         />
@@ -76,7 +74,7 @@ const Cart = ({
         </div>
         <p className="mb-8 ml-16 lg:ml-20 flex flex-row items-center font-medium text-sm text-rose-500">
           <img
-            src={carbonNeutralIcon}
+            src="/images/icon-carbon-neutral.svg"
             alt="Carbon neutral icon"
             className="mr-2"
           />
