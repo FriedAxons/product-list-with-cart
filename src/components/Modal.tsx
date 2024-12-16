@@ -73,7 +73,7 @@ const Modal = ({ cartItems, total, onNewOrder }: ModalProps) => {
         {/* Action Button */}
         <button
           onClick={onNewOrder}
-          className="bg-red w-full lg:mt-7 mt-5 mb-6 text-rose-50 py-4 rounded-full"
+          className="bg-red w-full lg:mt-7 mt-5 mb-6 text-rose-50 py-4 rounded-full hover:bg-red-hover"
         >
           Start New Order
         </button>
