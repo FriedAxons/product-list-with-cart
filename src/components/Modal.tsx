@@ -31,7 +31,7 @@ const Modal = ({ cartItems, total, onNewOrder }: ModalProps) => {
 
         {/* Scrollable Content Section */}
         <div
-          className="rounded-t-lg flex-1 overflow-y-auto px-4 lg:pt-5 lg:pl-5 lg:pr-6 lg:pb-0 pb-3"
+          className="rounded-t-lg flex-1 overflow-y-auto px-4 lg:pt-5 lg:pl-5 lg:pr-6 pb-0"
           style={{
             maxHeight: "calc(100vh - 15rem)", // Scrollable content constrained
           }}
@@ -39,7 +39,7 @@ const Modal = ({ cartItems, total, onNewOrder }: ModalProps) => {
           {cartItems.map(({ product, quantity }) => (
             <div
               key={product.name}
-              className="flex items-center lg:mb-4 mb-9 lg:pb-4"
+              className="flex items-center lg:mb-4 mb-9 lg:pb-3"
             >
               <img
                 src={product.image.thumbnail}
