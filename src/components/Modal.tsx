@@ -64,13 +64,12 @@ const Modal = ({ cartItems, total, onNewOrder }: ModalProps) => {
           ))}
         </div>
 
-        {/* Total and Footer Section */}
+        {/* Total and Button Section */}
         <div className="rounded-b-lg flex justify-between items-center px-4 lg:px-6 py-4">
           <p className="text-sm text-rose-500 font-medium">Order Total</p>
           <p className="text-2xl text-rose-900 font-extrabold">${total}</p>
         </div>
 
-        {/* Action Button */}
         <button
           onClick={onNewOrder}
           className="bg-red w-full lg:mt-7 mt-5 mb-6 text-rose-50 py-4 rounded-full hover:bg-red-hover"
