@@ -47,7 +47,7 @@ const Modal = ({ cartItems, total, onNewOrder }: ModalProps) => {
                 className="object-cover w-13 lg:h-12 h-[54px] rounded-md mr-4"
               />
               <div className="flex-1 min-w-0">
-                <p className="lg:text-xs text-[14.5px] text-rose-900 font-semibold mb-1 truncate lg:truncate-none">
+                <p className="lg:text-base text-[14.5px] text-rose-900 font-semibold mb-1 truncate lg:truncate-none">
                   {product.name}
                 </p>
                 <p className="text-red">
